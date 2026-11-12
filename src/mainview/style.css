@@ -1,0 +1,216 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family:
+		-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+		Cantarell, sans-serif;
+	background: #f5f5f5;
+	color: #222;
+}
+
+#app {
+	min-height: 100vh;
+}
+
+main {
+	min-height: 100vh;
+	padding: 30px 20px;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 2rem;
+	text-align: center;
+	margin: 0 0 4px;
+	color: #111;
+}
+
+.subtitle {
+	text-align: center;
+	color: #666;
+	margin: 0 0 24px;
+	font-size: 0.95rem;
+}
+
+.card {
+	background: white;
+	border-radius: 10px;
+	padding: 22px;
+	margin-bottom: 18px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+	margin: 0 0 12px;
+	font-size: 1.15rem;
+	color: #333;
+}
+
+.inputs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 18px;
+	align-items: flex-end;
+}
+
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	flex: 1 1 200px;
+}
+
+.field label {
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: #555;
+}
+
+select, input {
+	padding: 9px 12px;
+	font-size: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	background: white;
+}
+
+.result {
+	flex: 1 1 100%;
+	padding: 14px 16px;
+	background: #eef6ff;
+	border-radius: 8px;
+	display: flex;
+	align-items: baseline;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.result-label {
+	font-size: 0.9rem;
+	color: #555;
+}
+
+.result-value {
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: #1a5fb4;
+}
+
+.result-sub {
+	font-size: 0.85rem;
+	color: #888;
+}
+
+.chart-grid {
+	display: grid;
+	grid-template-columns: 80px repeat(6, 1fr);
+	gap: 4px;
+	margin-top: 8px;
+}
+
+.corner {
+	background: transparent;
+}
+
+.col-header, .row-header {
+	font-size: 0.75rem;
+	font-weight: 700;
+	color: #555;
+	text-align: center;
+	padding: 6px 2px;
+	background: #f0f0f0;
+	border-radius: 4px;
+}
+
+.col-header.active {
+	background: #1a5fb4;
+	color: white;
+}
+
+.row-header.active {
+	background: #1a5fb4;
+	color: white;
+}
+
+.cell {
+	font-size: 0.72rem;
+	text-align: center;
+	padding: 8px 2px;
+	border-radius: 4px;
+	background: #fafafa;
+	color: #333;
+	border: 1px solid #eee;
+}
+
+.cell.selected {
+	background: #ffd43b;
+	color: #111;
+	font-weight: 700;
+	border-color: #f08c00;
+	box-shadow: 0 0 0 2px #f08c00;
+}
+
+.cell.grey {
+	background: #e9e9e9;
+	color: #aaa;
+}
+
+.legend {
+	font-size: 0.8rem;
+	color: #888;
+	margin-top: 12px;
+}
+
+.hint {
+	font-size: 0.85rem;
+	color: #888;
+	margin: 0 0 12px;
+}
+
+.custom-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	align-items: flex-end;
+}
+
+.custom-row .field {
+	flex: 1 1 160px;
+}
+
+button {
+	padding: 9px 18px;
+	font-size: 0.95rem;
+	font-weight: 500;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.15s ease;
+}
+
+button.primary {
+	background: #1a5fb4;
+	color: white;
+}
+
+button.primary:hover {
+	background: #154a8f;
+}
+
+.custom-result {
+	margin-top: 12px;
+	font-size: 0.95rem;
+	color: #333;
+}
+
+.custom-result strong {
+	color: #1a5fb4;
+}

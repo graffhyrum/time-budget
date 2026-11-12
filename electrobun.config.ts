@@ -1,9 +1,8 @@
 import type { ElectrobunConfig } from "electrobun";
-import { readFileSync } from "node:fs";
 
 // Single source of truth for the app version: package.json.
-// Keep package.json in sync with the git tag (e.g. v1.1.0).
-const pkg = JSON.parse(readFileSync(new URL("./package.json", import.meta.url), "utf-8")) as { version: string };
+// Bun loads JSON modules directly, no file IO needed.
+import pkg from "./package.json";
 
 export default {
 	app: {

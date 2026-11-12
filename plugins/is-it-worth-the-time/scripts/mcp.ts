@@ -1,11 +1,12 @@
 // MCP stdio server exposing gauge_task for xkcd #1205 "Is it worth the time?"
 // Self-contained: resolves the project CLI relative to this file.
 import { execFileSync } from "node:child_process";
-import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
+import pkg from "../../../package.json";
+
 const CLI_PATH = resolve(import.meta.dir, "..", "..", "..", "src", "cli.ts");
-const PKG_VERSION = JSON.parse(readFileSync(resolve(import.meta.dir, "..", "..", "..", "package.json"), "utf-8")).version as string;
+const PKG_VERSION = pkg.version as string;
 
 type Req = { jsonrpc: "2.0"; id?: number | string; method: string; params?: Record<string, unknown> };
 

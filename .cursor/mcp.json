@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "worth-the-time": {
+      "command": "bun",
+      "args": ["run", "plugins/is-it-worth-the-time/scripts/mcp.ts"]
+    }
+  }
+}

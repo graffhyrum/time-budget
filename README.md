@@ -66,8 +66,23 @@ number (seconds).
 
 - `src/bun/index.ts` — main process (opens the window).
 - `src/mainview/` — webview UI (HTML/CSS/TypeScript): chart, inputs, styling.
+- `src/cli.ts` — command-line version of the calculation.
+- `plugins/is-it-worth-the-time/` — agent plugin: MCP server (`scripts/mcp.ts`) +
+  skill, plus per-harness config in `.mcp.json`, `.opencode/`, `.cursor/`,
+  `.claude/`.
 - `electrobun.config.ts` — app name, identifier, build config.
 - `hutch.config.ts` — scripts and Electrobun version pin.
+
+## Agent integration (MCP)
+
+The repo ships an MCP server that exposes a `gauge_task` tool, wired for
+Claude Code, OpenCode, and Cursor via project-level config (`.mcp.json`,
+`.opencode/opencode.jsonc`, `.cursor/mcp.json`). Open the repo in any of
+those harnesses and the tool is available automatically; otherwise run:
+
+```sh
+bun run plugins/is-it-worth-the-time/scripts/mcp.ts
+```
 
 ## Build a release
 

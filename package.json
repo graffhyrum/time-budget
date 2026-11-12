@@ -1,6 +1,6 @@
 {
 	"name": "is-it-worth-the-time",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"type": "module",
 	"description": "Electrobun app + CLI based on xkcd #1205",
 	"scripts": {
